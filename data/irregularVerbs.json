@@ -1,0 +1,16 @@
+[
+  { "verb": "go", "past": "went", "meaning": "去" },
+  { "verb": "take", "past": "took", "meaning": "拿" },
+  { "verb": "see", "past": "saw", "meaning": "看见" },
+  { "verb": "is", "past": "was", "meaning": "是" },
+  { "verb": "do", "past": "did", "meaning": "做" },
+  { "verb": "build", "past": "built", "meaning": "建造" },
+  { "verb": "come", "past": "came", "meaning": "来" },
+  { "verb": "eat", "past": "ate", "meaning": "吃" },
+  { "verb": "drink", "past": "drank", "meaning": "喝" },
+  { "verb": "drive", "past": "drove", "meaning": "开车" },
+  { "verb": "fly", "past": "flew", "meaning": "飞" },
+  { "verb": "get", "past": "got", "meaning": "得到" },
+  { "verb": "give", "past": "gave", "meaning": "给予" },
+  { "verb": "have", "past": "had", "meaning": "有" }
+]

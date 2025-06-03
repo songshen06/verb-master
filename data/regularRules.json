@@ -1,0 +1,18 @@
+[
+  {
+    "rule": "直接加-ed",
+    "examples": ["look→looked", "visit→visited", "play→played", "dance→danced"]
+  },
+  {
+    "rule": "以辅音+y结尾，变y为i加-ed",
+    "examples": ["study→studied", "try→tried", "cry→cried"]
+  },
+  {
+    "rule": "重读闭音节结尾，双写末尾辅音加-ed",
+    "examples": ["stop→stopped", "plan→planned"]
+  },
+  {
+    "rule": "以-e结尾，直接加-d",
+    "examples": ["live→lived", "use→used", "like→liked"]
+  }
+]

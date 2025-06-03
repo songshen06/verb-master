@@ -1,0 +1,72 @@
+[
+  {
+    "number": 1,
+    "verb": "go",
+    "past": "went",
+    "meaning": "去",
+    "type": "irregular"
+  },
+  {
+    "number": 2,
+    "verb": "take",
+    "past": "took",
+    "meaning": "拿",
+    "type": "irregular"
+  },
+  {
+    "number": 3,
+    "verb": "see",
+    "past": "saw",
+    "meaning": "看见",
+    "type": "irregular"
+  },
+  {
+    "number": 4,
+    "verb": "is",
+    "past": "was",
+    "meaning": "是",
+    "type": "irregular"
+  },
+  {
+    "number": 5,
+    "verb": "look",
+    "past": "looked",
+    "meaning": "看",
+    "type": "regular"
+  },
+  {
+    "number": 6,
+    "verb": "visit",
+    "past": "visited",
+    "meaning": "参观",
+    "type": "regular"
+  },
+  {
+    "number": 7,
+    "verb": "play",
+    "past": "played",
+    "meaning": "玩",
+    "type": "regular"
+  },
+  {
+    "number": 8,
+    "verb": "dance",
+    "past": "danced",
+    "meaning": "跳舞",
+    "type": "regular"
+  },
+  {
+    "number": 9,
+    "verb": "do",
+    "past": "did",
+    "meaning": "做",
+    "type": "irregular"
+  },
+  {
+    "number": 10,
+    "verb": "build",
+    "past": "built",
+    "meaning": "建造",
+    "type": "irregular"
+  }
+]

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动词大师 | Verb Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="zh-btn" class="btn btn--sm active" data-lang="zh">中文</button>
+            <button id="en-btn" class="btn btn--sm" data-lang="en">English</button>
+        </div>
+
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <div class="home-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-head"></div>
+                        <div class="character-body"></div>
+                        <div class="character-eyes"></div>
+                        <div class="character-mouth"></div>
+                    </div>
+                </div>
+                <h1 id="welcome-title">欢迎来到动词大师！</h1>
+                <p id="welcome-subtitle">让学习英语动词过去式变得有趣！</p>
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1748935959/gpt4o_images/gjhyz9rcoi4isuir0w5j.png" alt="动词时态概念图" class="concept-image">
+                </div>
+                <div class="home-buttons">
+                    <button id="learn-btn" class="btn btn--primary btn--lg">
+                        <span class="btn-icon">📚</span>
+                        <span class="btn-text">学习</span>
+                    </button>
+                    <button id="practice-btn" class="btn btn--primary btn--lg">
+                        <span class="btn-icon">✏️</span>
+                        <span class="btn-text">练习</span>
+                    </button>
+                    <button id="game-btn" class="btn btn--primary btn--lg">
+                        <span class="btn-icon">🎮</span>
+                        <span class="btn-text">游戏</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learn Screen -->
+        <div id="learn-screen" class="screen">
+            <div class="screen-header">
+                <button class="btn btn--secondary btn--sm back-btn">
+                    <span class="btn-text">返回主页</span>
+                </button>
+                <h2 id="learn-title">学习动词过去式</h2>
+            </div>
+            
+            <div class="tabs">
+                <button id="regular-tab" class="tab-btn active" data-tab="regular">规则动词</button>
+                <button id="irregular-tab" class="tab-btn" data-tab="irregular">不规则动词</button>
+            </div>
+            
+            <div id="regular-content" class="tab-content active">
+                <div class="rules-container">
+                    <h3>规则动词变化规则</h3>
+                    <div class="rule-cards" id="regular-rules">
+                        <!-- Rule cards will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="verbs-container">
+                    <h3>规则动词例子</h3>
+                    <div class="verb-cards" id="regular-verbs">
+                        <!-- Verb cards will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="irregular-content" class="tab-content">
+                <div class="verbs-container">
+                    <h3>不规则动词例子</h3>
+                    <div class="irregular-info">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748936009/gpt4o_images/tjk1p6istzwfsng8yo36.png" alt="规则与不规则动词对比图" class="concept-image">
+                        <p>不规则动词没有固定的变化规则，需要记住它们的特殊变化形式。</p>
+                    </div>
+                    <div class="verb-cards" id="irregular-verbs">
+                        <!-- Verb cards will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Screen -->
+        <div id="practice-screen" class="screen">
+            <div class="screen-header">
+                <button class="btn btn--secondary btn--sm back-btn">
+                    <span class="btn-text">返回主页</span>
+                </button>
+                <h2 id="practice-title">练习动词过去式</h2>
+            </div>
+            
+            <div class="practice-container">
+                <div class="progress-container">
+                    <div class="progress-label" id="progress-label">题目 1/10</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar" style="width: 10%;"></div>
+                    </div>
+                </div>
+                
+                <div class="score-container">
+                    <div class="score-label" id="score-label">得分：</div>
+                    <div class="score" id="score">0</div>
+                </div>
+                
+                <div id="exercise-container" class="exercise-container">
+                    <!-- Exercise will be populated here -->
+                </div>
+                
+                <div id="feedback-container" class="feedback-container hidden">
+                    <div id="feedback-icon" class="feedback-icon">✓</div>
+                    <div id="feedback-message" class="feedback-message">正确！</div>
+                    <button id="next-btn" class="btn btn--primary">下一题</button>
+                </div>
+                
+                <div id="completion-container" class="completion-container hidden">
+                    <div class="completion-message">
+                        <h3 id="congratulations-text">恭喜！</h3>
+                        <p id="completed-text">你已完成所有练习！</p>
+                        <div class="score-summary">
+                            <span id="final-score-label">最终得分：</span>
+                            <span id="final-score">0/10</span>
+                        </div>
+                    </div>
+                    <div class="celebration">
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                    </div>
+                    <button id="retry-practice-btn" class="btn btn--secondary">再试一次</button>
+                    <button id="practice-home-btn" class="btn btn--primary">返回主页</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="screen-header">
+                <button class="btn btn--secondary btn--sm back-btn">
+                    <span class="btn-text">返回主页</span>
+                </button>
+                <h2 id="game-title">动词配对游戏</h2>
+            </div>
+            
+            <div class="game-intro" id="game-intro">
+                <h3 id="match-verbs-text">配对动词和它们的过去式</h3>
+                <div class="difficulty-container">
+                    <p id="choose-difficulty-text">选择难度：</p>
+                    <div class="difficulty-buttons">
+                        <button id="easy-btn" class="btn btn--primary btn--sm difficulty-btn">简单</button>
+                        <button id="medium-btn" class="btn btn--primary btn--sm difficulty-btn">中等</button>
+                        <button id="hard-btn" class="btn btn--primary btn--sm difficulty-btn">困难</button>
+                    </div>
+                </div>
+                <button id="start-game-btn" class="btn btn--primary btn--lg">开始游戏</button>
+            </div>
+            
+            <div id="game-area" class="game-area hidden">
+                <div class="game-header">
+                    <div class="timer-container">
+                        <span id="time-left-label">剩余时间：</span>
+                        <span id="timer">60</span>
+                        <span id="seconds-text">秒</span>
+                    </div>
+                    <div class="game-score-container">
+                        <span id="game-score-label">得分：</span>
+                        <span id="game-score">0</span>
+                    </div>
+                </div>
+                
+                <div id="game-board" class="game-board">
+                    <!-- Game cards will be populated here -->
+                </div>
+                
+                <div id="game-result" class="game-result hidden">
+                    <h3 id="game-over-text">游戏结束！</h3>
+                    <div class="game-score-summary">
+                        <p id="your-score-text">你的得分：</p>
+                        <p id="final-game-score">0</p>
+                    </div>
+                    <button id="play-again-btn" class="btn btn--secondary">再玩一次</button>
+                    <button id="game-home-btn" class="btn btn--primary">返回主页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

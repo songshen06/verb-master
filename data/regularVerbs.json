@@ -1,0 +1,61 @@
+[
+  { "verb": "look", "past": "looked", "meaning": "看", "rule": "直接加-ed" },
+  {
+    "verb": "visit",
+    "past": "visited",
+    "meaning": "参观",
+    "rule": "直接加-ed"
+  },
+  { "verb": "play", "past": "played", "meaning": "玩", "rule": "直接加-ed" },
+  { "verb": "dance", "past": "danced", "meaning": "跳舞", "rule": "直接加-ed" },
+  { "verb": "talk", "past": "talked", "meaning": "说话", "rule": "直接加-ed" },
+  { "verb": "walk", "past": "walked", "meaning": "走路", "rule": "直接加-ed" },
+  {
+    "verb": "study",
+    "past": "studied",
+    "meaning": "学习",
+    "rule": "以辅音+y结尾，变y为i加-ed"
+  },
+  {
+    "verb": "try",
+    "past": "tried",
+    "meaning": "尝试",
+    "rule": "以辅音+y结尾，变y为i加-ed"
+  },
+  {
+    "verb": "cry",
+    "past": "cried",
+    "meaning": "哭",
+    "rule": "以辅音+y结尾，变y为i加-ed"
+  },
+  {
+    "verb": "stop",
+    "past": "stopped",
+    "meaning": "停止",
+    "rule": "重读闭音节结尾，双写末尾辅音加-ed"
+  },
+  {
+    "verb": "plan",
+    "past": "planned",
+    "meaning": "计划",
+    "rule": "重读闭音节结尾，双写末尾辅音加-ed"
+  },
+  {
+    "verb": "live",
+    "past": "lived",
+    "meaning": "居住",
+    "rule": "以-e结尾，直接加-d"
+  },
+  {
+    "verb": "use",
+    "past": "used",
+    "meaning": "使用",
+    "rule": "以-e结尾，直接加-d"
+  },
+  {
+    "verb": "like",
+    "past": "liked",
+    "meaning": "喜欢",
+    "rule": "以-e结尾，直接加-d"
+  }
+]
