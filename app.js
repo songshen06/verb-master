@@ -651,7 +651,8 @@ function selectGameCard(cardEl, card) {
   if (
     !gameState.gameActive ||
     cardEl.classList.contains("flipped") ||
-    cardEl.classList.contains("matched")
+    cardEl.classList.contains("matched") ||
+    gameState.selectedCards.length >= 2
   ) {
     return;
   }
@@ -660,7 +661,21 @@ function selectGameCard(cardEl, card) {
   gameState.selectedCards.push({ element: cardEl, card: card });
 
   if (gameState.selectedCards.length === 2) {
-    setTimeout(checkGameMatch, 800);
+    // Disable all cards while checking match
+    const allCards = document.querySelectorAll(".game-card");
+    allCards.forEach((card) => {
+      card.style.pointerEvents = "none";
+    });
+
+    setTimeout(() => {
+      checkGameMatch();
+      // Re-enable unmatched cards after checking
+      allCards.forEach((card) => {
+        if (!card.classList.contains("matched")) {
+          card.style.pointerEvents = "auto";
+        }
+      });
+    }, 800);
   }
 }
 
@@ -680,11 +695,12 @@ function checkGameMatch() {
       endGame(true);
     }
   } else {
-    // No match
+    // No match - ensure both cards are flipped back
     first.element.classList.remove("flipped");
     second.element.classList.remove("flipped");
   }
 
+  // Reset selected cards immediately after checking match
   gameState.selectedCards = [];
   updateGameScore();
 }
